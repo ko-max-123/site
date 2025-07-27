@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "ホーム"
-description: "FFTPRSWS ワークショップの公式サイトへようこそ"
+description: "FFTPRS ワークショップの公式サイトへようこそ"
 ---
 
 <!-- Hero Section -->
@@ -13,7 +13,7 @@ description: "FFTPRSWS ワークショップの公式サイトへようこそ"
 </section>
 
 <section class="mb-16">
-    <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">開催予定のFFTPRSWS</h3>
+    <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">開催予定のFFTPRS</h3>
     <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
         {% assign sorted_workshops = site.data.workshops | sort: 'start_date' | reverse %}
         {% for workshop in sorted_workshops limit:2 %}
