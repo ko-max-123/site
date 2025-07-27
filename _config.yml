@@ -1,0 +1,45 @@
+# Site settings
+title: "FFTPRSWS"
+description: "FFTPRSWS ワークショップ"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  workshops:
+    output: true
+    permalink: /pages/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "workshops"
+    values:
+      layout: "workshop"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/ 

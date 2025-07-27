@@ -1,0 +1,54 @@
+name: Preview Deployment
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+        
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        bundle install
+        
+    - name: Build Jekyll site
+      run: |
+        bundle exec jekyll build --destination public/
+        
+    - name: Deploy to Vercel
+      uses: amondnet/vercel-action@v25
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}
+        vercel-org-id: ${{ secrets.ORG_ID }}
+        vercel-project-id: ${{ secrets.PROJECT_ID }}
+        working-directory: ./
+        vercel-args: '--prod'
+        
+    - name: Comment PR
+      uses: actions/github-script@v6
+      with:
+        script: |
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: `🚀 **Preview deployed successfully!**
+            
+            📍 **Preview URL:** https://fftprsws-website-git-${context.head.ref}-${context.repo.owner}.vercel.app
+            
+            ✅ Build completed successfully
+            🔍 Please review the changes and approve if everything looks good.`
+          }) 

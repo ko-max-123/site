@@ -1,0 +1,68 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+        
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        bundle install
+        
+    - name: Build Jekyll site
+      run: |
+        bundle exec jekyll build --destination public/
+        
+    - name: Check for broken links
+      run: |
+        npm install -g markdown-link-check
+        find . -name "*.md" -exec markdown-link-check {} \;
+        
+    - name: Validate HTML
+      run: |
+        npm install -g html-validate
+        html-validate public/
+        
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: site-build
+        path: public/
+        
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Download build artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: site-build
+        path: public/
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v1.6.1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+        force_orphan: true 
