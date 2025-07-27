@@ -35,7 +35,7 @@ description: "FFTPRSWS ワークショップの公式サイトへようこそ"
         {% endfor %}
     </div>
     <div class="text-center mt-12">
-        <a href="/pages/workshops/" class="btn-primary">
+        <a href="/site/pages/workshops/" class="btn-primary">
             過去のワークショップを見る
         </a>
     </div>

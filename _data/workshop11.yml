@@ -1,6 +1,6 @@
 title: "第11回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
 sponsored_by: "電子情報通信学会 情報理論とその応用サブソサイエティ"
-executive_committee_member: "林夏生(北九州市立大学)、宮崎武(九州情報大学)、荒木俊輔(九州工業大学)、上原聡(北九州市立大学)"
+executive_committee_member: "林夏生(北九州市立大学)、宮崎武(九州情報大学)、荒木俊輔(九州工業大学)、小寺雄太(岡山大学)"
 overview: "今回で11回目となる有限体理論とその擬似乱数系列生成への応用ワークショップは、
 日頃より有限体理論やその擬似乱数系列生成への応用に関連する研究者、
 またそのようなテーマに興味をもっている研究者が一堂に会し、
@@ -8,21 +8,22 @@ overview: "今回で11回目となる有限体理論とその擬似乱数系列�
 あるいは個人的な興味から深く掘り下げているテーマなどを、十分な時間をかけてお互いに紹介し、
 共有し、密な議論を展開するための場を提供することを意図したワークショップです。それぞれの研究活動がより情熱をもって進められることへの一助になることを期待しています。
 <br /><br />本ワークショップでは、一般講演も設ける予定ですので、関連する発表についても広く歓迎いたします。なお、本年ワークショップは2日間に渡り対面及びオンライン形式のハイブリッドでの実施を計画しております。（情勢によっては完全オンラインに移行する可能性もございます）。"
-start_date: 2025-08-15
-end_date: 2025-08-16
-place: "？？？？？？？？ & どこかの県どこかの町"
-google_map: <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13248.024825478202!2d130.712204!3d33.889494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3543cbd8d8d13b4d%3A0x97af4e3ff45c8c58!2z5YyX5Lmd5bee5biC56uL5aSn5a2mIOOBsuOBs-OBjeOBruOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1753536413370!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-entrance_fee: "一般: 1,500円 / 学生: 無料"
-application_deadline: "申込締切: 2025年9月????日 (????)"
-manuscript_deadline: "原稿締め切り: 2025年9月????日 (????)"
-social_gathering_application_deadline: "懇親会申込締切：2025年9月????日 (????)" 
+start_date: 2025-09-16
+end_date: 2025-09-17
+place: "日田市複合文化施設AOSE"
+place_url: https://www.city.hita.oita.jp/kyouiku_iinkai/riyou/kouminkan/4922.html
+google_map: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.728120419911!2d130.9392304762689!3d33.325922655731596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35416a1e39a4a955%3A0x40f4cae237c25ac0!2z5pel55Sw5biC6KSH5ZCI5paH5YyW5pa96KitIEFPU0U!5e0!3m2!1sja!2sjp!4v1753613193881!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+entrance_fee: "一般: 1,000円 / 学生: 無料"
+application_deadline: "申込締切: 2025年8月26日 (火)"
+manuscript_deadline: "原稿締め切り: 2025年9月2日 (火)"
+social_gathering_application_deadline: "懇親会申込締切：2025年9月5日 (金)" 
 application_description: "
 発表及び参加をご希望の方は、以下の締め切りをご確認の上、こちらのフォームからご回答ください。<br />
 また、発表される場合はこちらのフォーマットにしたがって原稿を執筆のうえ、メール（fftprs[at]googlegroups.com）にて送付ください。<br />
 なお、講演(および参加)希望者多数の場合には、会場の広さなどの関係でお断りせざるを得ない場合があり得ますこと、予めご了承ください。<br />
 予稿集は当日配布いたします。また、16日の17時半ごろから懇親会を予定しております。ご参加の可否についても併せて上記フォームからご回答ください。"
 
-url: "/pages/workshop11/"
+url: "/site/pages/workshop11/"
 description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
 proceedings: "予稿集はまもなく公開されます。ご期待ください。"
 links: "関連情報はまもなく公開されます。ご期待ください。"
@@ -39,16 +40,16 @@ program:
       speaker: ""
       description: "以下、発表・質疑で30分/人、転換5分としています。"
     - time: "13:30 - 14:00"
-      title: "講演1: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究"
-      speaker: "発表者: 髙市 康平（九州工業大学）"
+      title: "講演1: 講演タイトル"
+      speaker: "発表者: 発表者（大学名）"
       description: "不要なら消す。発表概要"
     - time: "13:30 - 14:00"
-      title: "講演1: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究"
-      speaker: "発表者: 髙市 康平（九州工業大学）"
+      title: "講演1: 講演タイトル"
+      speaker: "発表者: 発表者（大学名）"
       description: "不要なら消す。発表概要"
     - time: "13:30 - 14:00"
-      title: "講演1: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究"
-      speaker: "発表者: 髙市 康平（九州工業大学）"
+      title: "講演1: 講演タイトル"
+      speaker: "発表者: 発表者（大学名）"
       description: "不要なら消す。発表概要"
   - day: "2日目: 2025年9月?????日(?????)"
     time_schedule: 
@@ -61,14 +62,14 @@ program:
       speaker: ""
       description: "以下、発表・質疑で30分/人、転換5分としています。"
     - time: "13:30 - 14:00"
-      title: "講演1: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究"
-      speaker: "発表者: 髙市 康平（九州工業大学）"
+      title: "講演1: 講演タイトル"
+      speaker: "発表者: 発表者（大学名）"
       description: "不要なら消す。発表概要"
     - time: "13:30 - 14:00"
-      title: "講演1: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究"
-      speaker: "発表者: 髙市 康平（九州工業大学）"
+      title: "講演1: 講演タイトル"
+      speaker: "発表者: 発表者（大学名）"
       description: "不要なら消す。発表概要"
     - time: "13:30 - 14:00"
-      title: "講演1: ローレンツ方程式を用いた動的ランダム鍵生成器の整数化に関する研究"
-      speaker: "発表者: 髙市 康平（九州工業大学）"
+      title: "講演1: 講演タイトル"
+      speaker: "発表者: 発表者（大学名）"
       description: "不要なら消す。発表概要"
