@@ -24,7 +24,7 @@ description: "FFTPRSで開催されたワークショップの一覧です"
                         {% if workshop.status == '未定' %}
                             <a class="inline-block bg-gray-300 text-gray-600 font-semibold px-6 py-2 rounded-lg cursor-not-allowed" href="#">詳細を見る</a>
                         {% else %}
-                            <a class="inline-block bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300" href="{{ workshop.url | relative_url }}">詳細を見る</a>
+                            <a class="inline-block bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300" href="{{ workshop.url | relative_url }}" target="_blank">詳細を見る</a>
                         {% endif %}
                     </div>
                 </div>
