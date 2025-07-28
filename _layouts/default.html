@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">    
+    <title>{{ site.title }}|{% if page.title %}{{ page.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="robots" content="index,follow">  
+    <link rel="canonical" href="https://ko-max-123.github.io/site/">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/site/{{ '/assets/css/style.css' | relative_url }}">
+    {%- seo -%}
     
 </head>
 <body class="bg-gray-50">
