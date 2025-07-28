@@ -40,6 +40,8 @@ GEM
       sass-embedded (~> 1.75)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.5.1)
@@ -77,6 +79,7 @@ DEPENDENCIES
   jekyll (~> 4.3.0)
   jekyll-feed (~> 0.17)
   jekyll-seo-tag (~> 2.8)
+  jekyll-sitemap (~> 1.4)
   tzinfo (>= 1)
   tzinfo-data
   wdm (~> 0.1.1)

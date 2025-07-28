@@ -13,7 +13,7 @@ description: "FFTPRS ワークショップの公式サイトへようこそ"
 </section>
 
 <section class="mb-16">
-    <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">開催予定のFFTPRS</h3>
+    <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">直近のFFTPRS</h3>
     <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
         {% assign sorted_workshops = site.data.workshops | sort: 'start_date' | reverse %}
         {% for workshop in sorted_workshops limit:2 %}
@@ -28,14 +28,14 @@ description: "FFTPRS ワークショップの公式サイトへようこそ"
                     {% if workshop.status == '未定' %}
                         <a class="inline-block bg-gray-300 text-gray-600 font-semibold px-6 py-2 rounded-lg cursor-not-allowed" href="#">詳細を見る</a>
                     {% else %}
-                        <a class="inline-block bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300" href="{{ workshop.url | relative_url }}">詳細を見る</a>
+                        <a class="inline-block bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300" href="{{ workshop.url | relative_url }}" target="_blank">詳細を見る</a>
                     {% endif %}
                 </div>
             </div>
         {% endfor %}
     </div>
     <div class="text-center mt-12">
-        <a href="/site/pages/workshops/" class="btn-primary">
+        <a href="/site/pages/workshops/" class="btn-primary" target="_blank">
             過去のワークショップを見る
         </a>
     </div>
