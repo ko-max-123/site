@@ -6,8 +6,44 @@ description: "第11回有限体理論とその擬似乱数系列生成への応�
 {% assign workshop11 = site.data.workshop11 %}
 <main class="container mx-auto px-6 md:px-8 py-12" id="top">
     <h1 class="text-4xl font-bold text-center mb-2">{{ workshop11.title }}</h1>
-    <p class="text-center text-gray-500 mb-12">主催: {{ workshop11.sponsored_by }}</p>
-    <p class="text-center text-gray-500 mb-12">実行委員: {{ workshop11.executive_committee_member }}</p>
+    <p class="text-center text-gray-500 mb-4">主催: {{ workshop11.sponsored_by }}</p>
+    <p class="text-center text-gray-500 mb-8">実行委員: {{ workshop11.executive_committee_member }}</p>
+    
+    <!-- アンカーリンク -->
+    <div class="flex justify-center mb-12">
+        <nav class="flex flex-wrap gap-4 justify-center">
+            <a href="#overview" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6-4h6m2 5H7a2 2 0 00-2 2v4a2 2 0 002 2h10a2 2 0 002-2v-4a2 2 0 00-2-2z"></path>
+                </svg>
+                概要
+            </a>
+            <a href="#info" class="inline-flex items-center px-4 py-2 bg-gray-600 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors duration-200 shadow-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                基本情報
+            </a>
+            <a href="#program" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors duration-200 shadow-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                プログラム
+            </a>
+            <a href="#proceedings" class="inline-flex items-center px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg hover:bg-purple-700 transition-colors duration-200 shadow-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                予稿集
+            </a>
+            <a href="#links" class="inline-flex items-center px-4 py-2 bg-orange-600 text-white text-sm font-medium rounded-lg hover:bg-orange-700 transition-colors duration-200 shadow-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                </svg>
+                関連情報
+            </a>
+        </nav>
+    </div>
     <section class="mb-12" id="overview">
         <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">概要</h2>
         <p class="text-gray-700 leading-relaxed">
@@ -43,11 +79,28 @@ description: "第11回有限体理論とその擬似乱数系列生成への応�
                         <li>{{ workshop11.social_gathering_application_deadline }}</li>
                         <li>詳細は申込要領ページよりご確認の上、お申し込みください。</li>
                     </ul>
-                    <p class="mb-4">
-                        <br />
-                        {{ workshop11.application_description }}
-                    </p>
-
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">発表申し込みについて</h4>
+                        <div class="text-gray-700 leading-relaxed mb-4">
+                            {{ workshop11.application_description }}
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border border-gray-200">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h5 class="font-medium text-gray-800 mb-1">発表原稿フォーマット</h5>
+                                    <p class="text-sm text-gray-600">発表原稿のフォーマットをダウンロードいただけます。</p>
+                                </div>
+                                <a class="inline-flex items-center bg-blue-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-sm"
+                                   href="#">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    ダウンロード
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
