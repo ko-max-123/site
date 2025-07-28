@@ -1,6 +1,6 @@
 - title: "第12回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
-  start_date: 2026-09-01
-  end_date: 2026-09-02
+  start_date: 2026-09-15
+  end_date: 2026-09-16
   url: ""
   status: "未定"
   description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
@@ -13,58 +13,71 @@
   description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
 
 - title: "第10回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
-  start_date: 2024-09-16
-  end_date: 2024-09-17
-  url: "https://sites.google.com/ec.okayama-u.ac.jp/fftprs2024"
+  start_date: 2024-08-15
+  end_date: 2024-08-16
+  url: "/pages/workshop-11/"
   status: "終了"
   description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
 
 - title: "第9回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
-  start_date: 2023-09-11
-  end_date: 2023-09-12
-  url: "https://sites.google.com/view/fftprs2023"
+  start_date: 2023-08-15
+  end_date: 2023-08-16
+  url: "/pages/workshop-11/"
   status: "終了"
   description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
 
 - title: "第8回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
-  start_date: 2022-09-12
-  end_date: 2022-09-12
-  url: "https://sites.google.com/view/fftprsws2022"
+  start_date: 2022-08-15
+  end_date: 2022-08-16
+  url: "/pages/workshop-11/"
   status: "終了"
   description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
 
 - title: "第7回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
-  start_date: 2021-09-30
-  end_date: 2021-09-30
-  url: "http://fftprsws2021.is.env.kitakyu-u.ac.jp/"
+  start_date: 2021-08-15
+  end_date: 2021-08-16
+  url: "/pages/workshop-11/"
   status: "終了"
   description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
 
 - title: "第6回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
-  start_date: 2020-09-28
-  end_date: 2020-09-29
-  url: "https://isec.ec.okayama-u.ac.jp/fftprsws2020/"
+  start_date: 2020-08-15
+  end_date: 2020-08-16
+  url: "/pages/workshop-11/"
   status: "終了"
   description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
 
 - title: "第5回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
-  start_date: 2019-09-24
-  end_date: 2019-09-25
-  url: "https://isec.ec.okayama-u.ac.jp/fftprsws2019/"
+  start_date: 2019-08-15
+  end_date: 2019-08-16
+  url: "/pages/workshop-11/"
   status: "終了"
   description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
 
 - title: "第4回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
-  start_date: 2018-08-27
-  end_date: 2018-08-28
-  url: "http://www.ca.csse.yamaguchi-u.ac.jp/fftprsws18/"
+  start_date: 2018-08-15
+  end_date: 2018-08-16
+  url: "/pages/workshop-11/"
   status: "終了"
   description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
 
 - title: "第3回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
-  start_date: 2017-10-1
-  end_date: 2017-10-1
-  url: "http://fftprsws2017.is.env.kitakyu-u.ac.jp/"
+  start_date: 2017-08-15
+  end_date: 2017-08-16
+  url: "/pages/workshop-11/"
   status: "終了"
   description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
 
+- title: "第2回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
+  start_date: 2016-08-15
+  end_date: 2016-08-16
+  url: "/pages/workshop-11/"
+  status: "終了"
+  description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
+
+- title: "第1回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
+  start_date: 2015-08-15
+  end_date: 2015-08-16
+  url: "/pages/workshop-11/"
+  status: "終了"
+  description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
