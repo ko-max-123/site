@@ -13,7 +13,7 @@ description: "FFTPRS ワークショップの公式サイトへようこそ"
 </section>
 
 <section class="mb-16">
-    <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">直近のFFTPRS</h3>
+    <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">直近のFFTPRS ワークショップ</h3>
     <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
         {% assign sorted_workshops = site.data.workshops | where_exp: "item", "item.start_date != null" | sort: 'start_date' | reverse %}
         {% for workshop in sorted_workshops limit:2 %}
