@@ -15,7 +15,7 @@ description: "FFTPRS ワークショップの公式サイトへようこそ"
 <section class="mb-16">
     <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">直近のFFTPRS</h3>
     <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-        {% assign sorted_workshops = site.data.workshops | sort: 'start_date' | reverse %}
+        {% assign sorted_workshops = site.data.workshops | where_exp: "item", "item.start_date != null" | sort: 'start_date' | reverse %}
         {% for workshop in sorted_workshops limit:2 %}
             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img alt="Workshop" class="w-full h-48 object-cover"
