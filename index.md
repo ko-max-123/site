@@ -11,7 +11,7 @@ description: "FFTPRS ワークショップの公式サイトへようこそ"
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">サブタイトル（概要）</p>
     </div>
     
-    <!-- アンカーリンク -->
+    <!-- アンカーリンク 
     <div class="flex justify-center mb-12">
         <nav class="flex flex-wrap gap-4 justify-center">
             <a href="#recent-workshops" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-sm">
@@ -28,6 +28,7 @@ description: "FFTPRS ワークショップの公式サイトへようこそ"
             </a>
         </nav>
     </div>
+    -->
 </section>
 
 <section class="mb-16" id="recent-workshops">
