@@ -83,7 +83,7 @@ description: "第11回有限体理論とその擬似乱数系列生成への応�
                 <div class="bg-gray-50 p-4 font-semibold text-gray-600">参加費</div>
                 <div class="p-4 md:col-span-3">{{ workshop.entrance_fee }}</div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 border-b">
                 <div class="bg-gray-50 p-4 font-semibold text-gray-600">発表申し込み</div>
                 <div class="p-4 md:col-span-3">
                     <ul class="list-disc list-inside text-gray-700 space-y-2">
@@ -113,14 +113,65 @@ description: "第11回有限体理論とその擬似乱数系列生成への応�
                                 </a>
                             </div>
                         </div>
+                        
+                        <!-- 発表に関する注意 
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg mt-6">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-3">
+                                    <h5 class="text-sm font-medium text-yellow-800 mb-2">発表に関する注意</h5>
+                                    <div class="text-sm text-yellow-700">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>発表時間は20分（発表15分、質疑応答5分）です。</li>
+                                            <li>発表は日本語または英語で行ってください。</li>
+                                            <li>発表資料は事前にアップロードしていただきます。</li>
+                                            <li>発表当日は、事前にアップロードした資料を使用してください。</li>
+                                            <li>質疑応答の時間は厳守してください。</li>
+                                            <li>発表内容に関する質問は、発表終了後の質疑応答時間にお願いします。</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        -->
                     </div>
                 </div>
             </div>
+            <!--
+            <div class="grid grid-cols-1 md:grid-cols-4 border-b">
+                <div class="bg-gray-50 p-4 font-semibold text-gray-600">発表に関する注意</div>
+                <div class="p-4 md:col-span-3">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <div class="text-sm text-yellow-700">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>発表時間は20分（発表15分、質疑応答5分）です。</li>
+                                    <li>発表は日本語または英語で行ってください。</li>
+                                    <li>発表資料は事前にアップロードしていただきます。</li>
+                                    <li>発表当日は、事前にアップロードした資料を使用してください。</li>
+                                    <li>質疑応答の時間は厳守してください。</li>
+                                    <li>発表内容に関する質問は、発表終了後の質疑応答時間にお願いします。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
         </div>
     </section>
     <section class="mb-12" id="program">
         <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">プログラム詳細</h2>
-        {% assign programs = site.data.workshop.program %}
+        {% assign programs = site.data.workshop11.program %}
         {% for day in programs %}
             <div class="mb-8">
                 <h3 class="text-xl font-bold bg-blue-50 text-blue-700 p-4 rounded-t-lg">{{ day.day }}</h3>
