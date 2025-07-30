@@ -3,11 +3,24 @@ layout: default
 title: "第11回有限体理論とその擬似乱数系列生成への応用ワークショップ"
 description: "第11回有限体理論とその擬似乱数系列生成への応用ワークショップ"
 ---
-{% assign workshop11 = site.data.workshop11 %}
-<main class="container mx-auto px-6 md:px-8 py-12" id="top">
-    <h1 class="text-4xl font-bold text-center mb-2">{{ workshop11.title }}</h1>
-    <p class="text-center text-gray-500 mb-4">主催: {{ workshop11.sponsored_by }}</p>
-    <p class="text-center text-gray-500 mb-8">実行委員: {{ workshop11.executive_committee_member }}</p>
+{% assign workshop = site.data.workshop11 %}
+<!-- パンくず -->
+<nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8 px-6 md:px-8">
+    <a href="/site/" class="hover:text-blue-600 transition-colors duration-200">ホーム</a>
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    <a href="/site/pages/workshops/" class="hover:text-blue-600 transition-colors duration-200">ワークショップ一覧</a>
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    <span class="text-gray-700 font-medium">{{ workshop.title }}</span>
+</nav>
+
+<div class="container mx-auto px-6 md:px-8 py-12" id="top">    
+    <h1 class="text-4xl font-bold text-center mb-2">{{ workshop.title }}</h1>
+    <p class="text-center text-gray-500 mb-4">主催: {{ workshop.sponsored_by }}</p>
+    <p class="text-center text-gray-500 mb-8">実行委員: {{ workshop.executive_committee_member }}</p>
     
     <!-- アンカーリンク -->
     <div class="flex justify-center mb-12">
@@ -47,7 +60,7 @@ description: "第11回有限体理論とその擬似乱数系列生成への応�
     <section class="mb-12" id="overview">
         <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">概要</h2>
         <p class="text-gray-700 leading-relaxed">
-            {{ workshop11.overview }}
+            {{ workshop.overview }}
         </p>
     </section>
     <section class="mb-12" id="info">
@@ -55,34 +68,34 @@ description: "第11回有限体理論とその擬似乱数系列生成への応�
         <div class="border rounded-lg overflow-hidden">
             <div class="grid grid-cols-1 md:grid-cols-4 border-b">
                 <div class="bg-gray-50 p-4 font-semibold text-gray-600">開催日時</div>
-                <div class="p-4 md:col-span-3">{{ workshop11.start_date | date: "%Y年%m月%d日" }} 〜 {{ workshop11.end_date | date: "%Y年%m月%d日" }}</div>
+                <div class="p-4 md:col-span-3">{{ workshop.start_date | date: "%Y年%m月%d日" }} 〜 {{ workshop.end_date | date: "%Y年%m月%d日" }}</div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 border-b">
                 <div class="bg-gray-50 p-4 font-semibold text-gray-600">場所</div>
                 <div class="p-4 md:col-span-3">
-                    <p class="mb-4"><a href="{{ workshop11.place_url }}" target="_blank">{{ workshop11.place }}</a></p>
+                    <p class="mb-4"><a href="{{ workshop.place_url }}" target="_blank">{{ workshop.place }}</a></p>
                     <div class="aspect-w-16 aspect-h-9 rounded-md overflow-hidden">
-                        {{ workshop11.google_map }}
+                        {{ workshop.google_map }}
                     </div>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 border-b">
                 <div class="bg-gray-50 p-4 font-semibold text-gray-600">参加費</div>
-                <div class="p-4 md:col-span-3">{{ workshop11.entrance_fee }}</div>
+                <div class="p-4 md:col-span-3">{{ workshop.entrance_fee }}</div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4">
                 <div class="bg-gray-50 p-4 font-semibold text-gray-600">発表申し込み</div>
                 <div class="p-4 md:col-span-3">
                     <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>{{ workshop11.application_deadline }}</li>
-                        <li>{{ workshop11.manuscript_deadline }}</li>
-                        <li>{{ workshop11.social_gathering_application_deadline }}</li>
+                        <li>{{ workshop.application_deadline }}</li>
+                        <li>{{ workshop.manuscript_deadline }}</li>
+                        <li>{{ workshop.social_gathering_application_deadline }}</li>
                         <li>詳細は申込要領ページよりご確認の上、お申し込みください。</li>
                     </ul>
                     <div class="bg-gray-50 p-6 rounded-lg mb-6">
                         <h4 class="text-lg font-semibold text-gray-800 mb-3">発表申し込みについて</h4>
                         <div class="text-gray-700 leading-relaxed mb-4">
-                            {{ workshop11.application_description }}
+                            {{ workshop.application_description }}
                         </div>
                         
                         <div class="bg-white p-4 rounded-lg border border-gray-200">
@@ -107,7 +120,7 @@ description: "第11回有限体理論とその擬似乱数系列生成への応�
     </section>
     <section class="mb-12" id="program">
         <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">プログラム詳細</h2>
-        {% assign programs = site.data.workshop11.program %}
+        {% assign programs = site.data.workshop.program %}
         {% for day in programs %}
             <div class="mb-8">
                 <h3 class="text-xl font-bold bg-blue-50 text-blue-700 p-4 rounded-t-lg">{{ day.day }}</h3>
@@ -166,4 +179,4 @@ description: "第11回有限体理論とその擬似乱数系列生成への応�
 
         </div>
     </section>
-</main>
+</div>

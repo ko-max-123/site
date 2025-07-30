@@ -10,9 +10,27 @@ description: "FFTPRS ワークショップの公式サイトへようこそ"
         <h2 class="text-4xl font-bold text-gray-900 mb-4">有限体理論とその擬似乱数系列生成への応用ワークショップ</h2>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">サブタイトル（概要）</p>
     </div>
+    
+    <!-- アンカーリンク -->
+    <div class="flex justify-center mb-12">
+        <nav class="flex flex-wrap gap-4 justify-center">
+            <a href="#recent-workshops" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                直近のワークショップ
+            </a>
+            <a href="#workshop-significance" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-200 shadow-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+                ワークショップの意義
+            </a>
+        </nav>
+    </div>
 </section>
 
-<section class="mb-16">
+<section class="mb-16" id="recent-workshops">
     <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">直近のFFTPRS ワークショップ</h3>
     <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
         {% assign sorted_workshops = site.data.workshops | where_exp: "item", "item.start_date != null" | sort: 'start_date' | reverse %}
@@ -28,21 +46,24 @@ description: "FFTPRS ワークショップの公式サイトへようこそ"
                     {% if workshop.status == '未定' %}
                         <a class="inline-block bg-gray-300 text-gray-600 font-semibold px-6 py-2 rounded-lg cursor-not-allowed" href="#">詳細を見る</a>
                     {% else %}
-                        <a class="inline-block bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300" href="{{ workshop.url | relative_url }}" target="_blank">詳細を見る</a>
+                        <a class="inline-block bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300" href="{{ workshop.url | relative_url }}">詳細を見る</a>
                     {% endif %}
                 </div>
             </div>
         {% endfor %}
     </div>
     <div class="text-center mt-12">
-        <a href="/site/pages/workshops/" class="btn-primary" target="_blank">
-            過去のワークショップを見る
+        <a href="/site/pages/workshops/" class="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors duration-300 shadow-md hover:shadow-lg" target="_blank">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+            FFTPRS ワークショップ一覧を見る
         </a>
     </div>
 </section>
 
 <!-- About Section -->
-<section class="bg-blue-50 rounded-lg p-8 md:p-12 mb-16">
+<section class="bg-blue-50 rounded-lg p-8 md:p-12 mb-16" id="workshop-significance">
     <div class="flex flex-col md:flex-row items-center justify-between gap-8">
         <div class="md:w-1/2">
         <h3 class="text-3xl font-bold text-gray-800 mb-4">有限体理論とその擬似乱数系列生成への応用ワークショップの意義</h3>

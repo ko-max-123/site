@@ -1,0 +1,148 @@
+---
+layout: default
+title: "予稿集一覧"
+description: "FFTPRSワークショップの予稿集一覧"
+---
+
+{% assign proceedings = site.data.proceedings | sort: 'year' | reverse %}
+
+<main class="container mx-auto px-6 md:px-8 py-12" id="top">
+    <h1 class="text-4xl font-bold text-center mb-2">予稿集一覧</h1>
+    <p class="text-center text-gray-500 mb-8">FFTPRSワークショップの過去の予稿集をダウンロードいただけます</p>
+    
+    <!-- アンカーリンク -->
+    <div class="flex justify-center mb-12">
+        <nav class="flex flex-wrap gap-4 justify-center">
+            <a href="#overview" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6-4h6m2 5H7a2 2 0 00-2 2v4a2 2 0 002 2h10a2 2 0 002-2v-4a2 2 0 00-2-2z"></path>
+                </svg>
+                概要
+            </a>
+            <a href="#proceedings-list" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors duration-200 shadow-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                予稿集一覧
+            </a>
+        </nav>
+    </div>
+
+    <section class="mb-12" id="overview">
+        <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">概要</h2>
+        <div class="bg-blue-50 p-6 rounded-lg">
+            <p class="text-gray-700 leading-relaxed mb-4">
+                有限体理論とその擬似乱数系列生成への応用ワークショップ（FFTPRS）では、各回のワークショップで発表された研究内容を予稿集としてまとめています。
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                予稿集には、ワークショップで発表された論文の要旨や研究内容が含まれており、有限体理論や擬似乱数系列生成に関する研究成果をご覧いただけます。
+            </p>
+        </div>
+    </section>
+
+    <section class="mb-12" id="proceedings-list">
+        <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">予稿集一覧</h2>
+        
+        <div class="grid gap-6">
+            {% for proceeding in proceedings %}
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <h3 class="text-xl font-bold text-gray-800 mr-3">{{ proceeding.title }}</h3>
+                                {% if proceeding.status == "準備中" %}
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                        <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        準備中
+                                    </span>
+                                {% elsif proceeding.status == "公開中" %}
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        公開中
+                                    </span>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    {{ proceeding.date }}
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    {{ proceeding.location }}
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    {{ proceeding.pages }}
+                                </div>
+                            </div>
+                            
+                            <p class="text-gray-700 mb-4">{{ proceeding.description }}</p>
+                            
+                            {% if proceeding.status == "公開中" %}
+                            <div class="flex items-center text-sm text-gray-500">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                ファイルサイズ: {{ proceeding.file_size }}
+                            </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="mt-4 md:mt-0 md:ml-6">
+                            {% if proceeding.status == "準備中" %}
+                                <button class="inline-flex items-center px-4 py-2 bg-gray-300 text-gray-600 font-medium rounded-lg cursor-not-allowed" disabled>
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    準備中
+                                </button>
+                            {% elsif proceeding.status == "未公開" %}
+                                <button class="inline-flex items-center px-4 py-2 bg-gray-300 text-gray-600 font-medium rounded-lg cursor-not-allowed" disabled>
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    未公開
+                                </button>
+                            {% else %}
+                                <a href="{{ proceeding.download_url }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    ダウンロード
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="bg-gray-50 p-8 rounded-lg mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">お問い合わせ</h2>
+        <p class="text-gray-700 mb-4">
+            予稿集に関するお問い合わせや、特定の回の予稿集についてのご質問がございましたら、お気軽にお問い合わせください。
+        </p>
+        <div class="flex items-center">
+            <svg class="w-5 h-5 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <a href="mailto:test@test" class="text-blue-600 hover:underline">test@test</a>
+        </div>
+    </section>
+</main> 
