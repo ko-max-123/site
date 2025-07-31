@@ -43,7 +43,7 @@ description: "FFTPRS ワークショップの公式サイトへようこそ"
                     <h4 class="text-xl font-bold text-gray-800 mb-2">{{ workshop.title }}</h4>
                     <p class="text-sm text-gray-500 mb-4">{{ workshop.start_date | date: "%Y年%m月%d日" }} 〜 {{ workshop.end_date | date: "%Y年%m月%d日" }}</p>
                     <p class="text-sm text-gray-500 mb-4 font-bold">{{ workshop.status }}</p>
-                    <p class="text-gray-700 mb-4">{{ workshop.description }}</p>
+                    <p class="text-gray-700 mb-4">開催地: {{ workshop.location }}</p>
                     {% if workshop.status == '未定' %}
                         <a class="inline-block bg-gray-300 text-gray-600 font-semibold px-6 py-2 rounded-lg cursor-not-allowed" href="#">詳細を見る</a>
                     {% else %}
