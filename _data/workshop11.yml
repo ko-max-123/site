@@ -23,11 +23,6 @@ application_description: "
 なお、講演(および参加)希望者多数の場合には、会場の広さなどの関係でお断りせざるを得ない場合があり得ますこと、予めご了承ください。<br />
 予稿集は当日配布いたします。また、16日の19時（仮）ごろから懇親会を予定しております。ご参加の可否についても併せて上記メールからご回答ください。"
 
-url: "/site/pages/workshop11/"
-description: "説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明"
-proceedings: "予稿集はまもなく公開されます。ご期待ください。"
-links: "関連情報はまもなく公開されます。ご期待ください。"
-
 program: 
   - day: "1日目: 2025年09月16日(火)"
     time_schedule: 
@@ -69,3 +64,15 @@ program:
       title: "完全撤収完了"
       speaker: ""
       description: ""
+
+proceedings: ""
+
+links: 
+  - title: "情報理論とその応用サブソサイエティ（SITAサブソ）"
+    url: "https://www.ieice.org/ess/sita/index.html"
+  - title: "第10回有限体理論とその擬似乱数系列生成への応用ワークショップ"
+    url: "https://sites.google.com/ec.okayama-u.ac.jp/fftprs2024"
+  - title: "日田市観光協会"
+    url: "https://oidehita.com/"
+  - title: "お問い合わせ(実行委員宛)"
+    url: "mailto:test@test"

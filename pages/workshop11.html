@@ -4,6 +4,9 @@ title: "第11回有限体理論とその擬似乱数系列生成への応用ワ�
 description: "第11回有限体理論とその擬似乱数系列生成への応用ワークショップ"
 ---
 {% assign workshop = site.data.workshop11 %}
+{% assign programs = site.data.workshop11.program %}
+{% assign links = site.data.workshop11.links %}
+
 <!-- パンくず -->
 <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8 px-6 md:px-8">
     <a href="/site/" class="hover:text-blue-600 transition-colors duration-200">ホーム</a>
@@ -179,7 +182,6 @@ description: "第11回有限体理論とその擬似乱数系列生成への応�
     </section>
     <section class="mb-12" id="program">
         <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">プログラム詳細</h2>
-        {% assign programs = site.data.workshop11.program %}
         {% for day in programs %}
             <div class="mb-8">
                 <h3 class="text-xl font-bold bg-blue-50 text-blue-700 p-4 rounded-t-lg">{{ day.day }}</h3>
@@ -200,40 +202,39 @@ description: "第11回有限体理論とその擬似乱数系列生成への応�
     </section>
     <section class="bg-gray-50 p-8 rounded-lg flex flex-col md:flex-row justify-between items-center mb-12"
         id="proceedings">
+        
+        {% if workshop.proceedings == '' %}
+        <div>
+            <h2 class="text-2xl font-bold mb-2">予稿集</h2>
+            <p class="text-gray-600">予稿集はまもなく公開されます。ご期待ください。</p>
+        </div>
+        <button class="mt-4 md:mt-0 bg-gray-300 text-gray-600 font-bold py-3 px-6 rounded-lg cursor-not-allowed flex items-center" disabled>
+            <span class="material-icons mr-2">download</span>
+            準備中
+        </button>
+
+        {% else %}
         <div>
             <h2 class="text-2xl font-bold mb-2">予稿集</h2>
             <p class="text-gray-600">ワークショップの予稿集（PDF形式）は、ダウンロードいただけます。</p>
         </div>
         <a class="mt-4 md:mt-0 bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
-            href="#">
+            href="{{ workshop.proceedings }}">
             <span class="material-icons mr-2">download</span>
             ダウンロード
         </a>
+        {% endif %}
     </section>
     <section id="links">
         <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">関連情報</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {% for link in links %}
             <div class="p-6 border rounded-lg">
-                <h3 class="font-bold text-lg mb-2">情報理論とその応用サブソサイエティ（SITAサブソ）</h3>
+                <h3 class="font-bold text-lg mb-2">{{ link.title }}</h3>
                 <a class="text-blue-600 hover:underline"
-                    href="https://www.ieice.org/ess/sita/index.html" target="_blank">https://www.ieice.org/ess/sita/index.html</a>
+                    href="{{ link.url }}" target="_blank">{{ link.url }}</a>
             </div>
-            <div class="p-6 border rounded-lg">
-                <h3 class="font-bold text-lg mb-2">第10回有限体理論とその擬似乱数系列生成への応用ワークショップ</h3>
-                <a class="text-blue-600 hover:underline"
-                    href="https://sites.google.com/ec.okayama-u.ac.jp/fftprs2024" target="_blank">https://sites.google.com/ec.okayama-u.ac.jp/fftprs2024</a>
-            </div>
-            <div class="p-6 border rounded-lg">
-                <h3 class="font-bold text-lg mb-2">日田市観光協会</h3>
-                <a class="text-blue-600 hover:underline"
-                    href="https://oidehita.com/" target="_blank">https://oidehita.com/</a>
-            </div>
-            <div class="p-6 border rounded-lg">
-                <h3 class="font-bold text-lg mb-2">お問い合わせ</h3>
-                <p class="text-gray-600">実行委員長 林夏生: <a class="text-blue-600 hover:underline"
-                        href="mailto:test@test">test@test</a></p>
-            </div>
-
+            {% endfor %}
         </div>
     </section>
 </div>
