@@ -93,6 +93,7 @@ program:
       description: ""
 
 proceedings: ""
+manuscript_format: ""
 
 links: 
   - title: "情報理論とその応用サブソサイエティ（SITAサブソ）"
