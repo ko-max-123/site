@@ -69,11 +69,11 @@
   location: "旭川市民文化会館"
 
 - title: "第2回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
-  start_date: 2016-10-01
-  end_date: 2016-10-01
-  url: "#"
+  start_date: 2016-09-14
+  end_date: 2016-09-16
+  url: "/site/pages/workshop2/"
   status: "終了"
-  location: ""
+  location: "日本文理大学 湯布院研修所"
 
 - title: "第1回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
   start_date: 2015-10-01
