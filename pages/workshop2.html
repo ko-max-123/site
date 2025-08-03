@@ -1,0 +1,240 @@
+---
+layout: default
+title: "第2回有限体理論とその擬似乱数系列生成への応用ワークショップ"
+description: "第12回有限体理論とその擬似乱数系列生成への応用ワークショップ"
+---
+{% assign workshop = site.data.workshop2 %}
+{% assign programs = site.data.workshop2.program %}
+{% assign links = site.data.workshop2.links %}
+
+<!-- パンくず -->
+<nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8 px-6 md:px-8">
+    <a href="/site/" class="hover:text-blue-600 transition-colors duration-200">ホーム</a>
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    <a href="/site/pages/workshops/" class="hover:text-blue-600 transition-colors duration-200">ワークショップ一覧</a>
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    <span class="text-gray-700 font-medium">{{ workshop.title }}</span>
+</nav>
+
+<div class="container mx-auto px-6 md:px-8 py-12" id="top">
+    <h1 class="text-4xl font-bold text-center mb-2">{{ workshop.title }}</h1>
+    <p class="text-center text-gray-500 mb-4">主催: {{ workshop.sponsored_by }}</p>
+    <p class="text-center text-gray-500 mb-8">実行委員: {{ workshop.executive_committee_member }}</p>
+    
+    <!-- アンカーリンク -->
+    <div class="flex justify-center mb-12">
+        <nav class="flex flex-wrap gap-4 justify-center">
+            <a href="#overview" class="inline-block px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium shadow-sm">
+                概要
+            </a>
+            <a href="#info" class="inline-block px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium shadow-sm">
+                基本情報
+            </a>
+            <a href="#program" class="inline-block px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium shadow-sm">
+                プログラム
+            </a>
+            <a href="#proceedings" class="inline-block px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium shadow-sm">
+                予稿集
+            </a>
+            <a href="#links" class="inline-block px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium shadow-sm">
+                関連情報
+            </a>
+        </nav>
+    </div>
+    <section class="mb-12" id="overview">
+        <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">概要</h2>
+        <p class="text-gray-700 leading-relaxed">
+            {{ workshop.overview }}
+        </p>
+    </section>
+    <section class="mb-12" id="info">
+        <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">基本情報</h2>
+        <div class="border rounded-lg overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-4 border-b">
+                <div class="bg-gray-50 p-4 font-semibold text-gray-600">開催日時</div>
+                <div class="p-4 md:col-span-3">{{ workshop.start_date | date: "%Y年%m月%d日" }} 〜 {{ workshop.end_date | date: "%Y年%m月%d日" }}</div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 border-b">
+                <div class="bg-gray-50 p-4 font-semibold text-gray-600">場所</div>
+                <div class="p-4 md:col-span-3">
+                    <p class="mb-4"><a href="{{ workshop.place_url }}" target="_blank">{{ workshop.place }}</a></p>
+                    <div class="aspect-w-16 aspect-h-9 rounded-md overflow-hidden">
+                        {{ workshop.google_map }}
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 border-b">
+                <div class="bg-gray-50 p-4 font-semibold text-gray-600">参加費</div>
+                <div class="p-4 md:col-span-3">{{ workshop.entrance_fee }}</div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 border-b">
+                <div class="bg-gray-50 p-4 font-semibold text-gray-600">発表申し込み</div>
+                <div class="p-4 md:col-span-3">
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>{{ workshop.application_deadline }}</li>
+                        <li>{{ workshop.manuscript_deadline }}</li>
+                        <li>{{ workshop.social_gathering_application_deadline }}</li>
+                        <li>詳細は申込要領ページよりご確認の上、お申し込みください。</li>
+                    </ul>
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">発表申し込みについて</h4>
+                        <div class="text-gray-700 leading-relaxed mb-4">
+                            {{ workshop.application_description }}
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border border-gray-200">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h5 class="font-medium text-gray-800 mb-1">発表原稿フォーマット</h5>
+                                    <p class="text-sm text-gray-600">発表原稿のフォーマットをダウンロードいただけます。</p>
+                                </div>
+                                <a class="inline-flex items-center bg-blue-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-sm"
+                                   href="#">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    ダウンロード
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- 発表に関する注意 -->
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg mt-6">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-3">
+                                    <h5 class="text-sm font-medium text-yellow-800 mb-2">発表に関する注意</h5>
+                                    <div class="text-sm text-yellow-700">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>発表時間は30分（発表25分、質疑応答5分）です。</li>
+                                            <li>発表資料は事前にアップロードしていただきます。</li>
+                                            <li>発表当日は、事前にアップロードした資料を使用してください。</li>
+                                            <li>質疑応答の時間は厳守してください。</li>
+                                            <li>発表内容に関する質問は、発表終了後の質疑応答時間にお願いします。</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4">
+                <div class="bg-gray-50 p-4 font-semibold text-gray-600">参加に関する注意</div>
+                <div class="p-4 md:col-span-3">
+                    <div class="bg-red-50 border-l-4 border-red-400 p-4 rounded-lg">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <svg class="h-5 w-5 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h5 class="text-sm font-medium text-red-800 mb-2">新型コロナウイルス感染症対策について</h5>
+                                <div class="text-sm text-red-700">
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>参加当日は、体調不良の方は参加をお控えください。</li>
+                                        <li>咳やくしゃみがある場合は、マスクやハンカチで口を覆ってください。</li>
+                                        <li>感染症の状況により、開催方法が変更される場合があります。</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="grid grid-cols-1 md:grid-cols-4 border-b">
+                <div class="bg-gray-50 p-4 font-semibold text-gray-600">発表に関する注意</div>
+                <div class="p-4 md:col-span-3">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <div class="text-sm text-yellow-700">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>発表時間は20分（発表15分、質疑応答5分）です。</li>
+                                    <li>発表は日本語または英語で行ってください。</li>
+                                    <li>発表資料は事前にアップロードしていただきます。</li>
+                                    <li>発表当日は、事前にアップロードした資料を使用してください。</li>
+                                    <li>質疑応答の時間は厳守してください。</li>
+                                    <li>発表内容に関する質問は、発表終了後の質疑応答時間にお願いします。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+    <section class="mb-12" id="program">
+        <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">プログラム詳細</h2>
+        {% for day in programs %}
+            <div class="mb-8">
+                <h3 class="text-xl font-bold bg-blue-50 text-blue-700 p-4 rounded-t-lg">{{ day.day }}</h3>
+                    <div class="border border-t-0 rounded-b-lg p-6 space-y-8">
+                        {% for slot in day.time_schedule %}
+                            <div class="flex">
+                                <div class="w-28 text-gray-500 font-medium shrink-0">{{ slot.time }}</div>
+                                <div class="pl-6 border-l-2 border-gray-200">
+                                    <p class="font-semibold">{{ slot.title }}</p>
+                                    <p class="text-sm text-gray-600 mb-2">{{ slot.speaker }}</p>
+                                    <p class="text-sm text-gray-600">{{ slot.description }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+            </div>
+        {% endfor %}
+    </section>
+    <section class="bg-gray-50 p-8 rounded-lg flex flex-col md:flex-row justify-between items-center mb-12"
+        id="proceedings">
+        
+        {% if workshop.proceedings == '' %}
+        <div>
+            <h2 class="text-2xl font-bold mb-2">予稿集</h2>
+            <p class="text-gray-600">予稿集はまもなく公開されます。ご期待ください。</p>
+        </div>
+        <button class="mt-4 md:mt-0 bg-gray-300 text-gray-600 font-bold py-3 px-6 rounded-lg cursor-not-allowed flex items-center" disabled>
+            <span class="material-icons mr-2">download</span>
+            準備中
+        </button>
+
+        {% else %}
+        <div>
+            <h2 class="text-2xl font-bold mb-2">予稿集</h2>
+            <p class="text-gray-600">ワークショップの予稿集（PDF形式）は、ダウンロードいただけます。</p>
+        </div>
+        <a class="mt-4 md:mt-0 bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
+            href="{{ workshop.proceedings }}">
+            <span class="material-icons mr-2">download</span>
+            ダウンロード
+        </a>
+        {% endif %}
+    </section>
+    <section id="links">
+        <h2 class="text-2xl font-bold text-blue-600 border-l-4 border-blue-600 pl-4 mb-6">関連情報</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {% for link in links %}
+            <div class="p-6 border rounded-lg">
+                <h3 class="font-bold text-lg mb-2">{{ link.title }}</h3>
+                <a class="text-blue-600 hover:underline"
+                    href="{{ link.url }}" target="_blank">{{ link.url }}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>

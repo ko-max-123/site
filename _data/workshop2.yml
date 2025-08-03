@@ -1,0 +1,105 @@
+title: "第2回 有限体理論とその擬似乱数系列生成への応用ワークショップ"
+sponsored_by: "電子情報通信学会 情報理論とその応用サブソサイエティ"
+executive_committee_member: "上原聡(北九州市立大学)、宮崎武(北九州市立大学)、荒木俊輔(九州工業大学)"
+overview: "本ワークショップは，情報理論とその応用シンポジウム(SITA)あるいはInternational Symposium on Information Theory and Its Applications(ISITA)などにおいて、
+日頃より、有限体理論とその擬似乱数系列生成への応用に関連する研究の成果発表をしている研究者、またそのようなテーマに興味をもっている研究者が一堂に会し、
+日々の研究活動の中で得られた成果の報告をはじめ、疑問に思っている事柄、あるいは個人的な興味から深く掘り下げているテーマなどを、十分に時間をとってお互いに紹介し、共有し、
+密な議論を展開するための場を提供することを意図したワークショップです。
+そして、それぞれの研究活動がより情熱をもって進められることへの一助になることを期待しています。本ワークショップでは、一般講演も設ける予定ですので、関連する発表についても広く歓迎いたします。"
+start_date: 2016-09-14
+end_date: 2016-09-16
+place: "日本文理大学 湯布院研修所"
+place_url: https://nbu.co.jp/info/%E6%B9%AF%E5%B8%83%E9%99%A2%E7%A0%94%E4%BF%AE%E6%89%80-%E7%AE%A1%E7%90%86%E7%B5%82%E4%BA%86%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/
+google_map: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.6538330181206!2d131.3507546!3d33.2755538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546ac32a5e3f6e9%3A0x3f57c91b17213b27!2z5pel5pys5paH55CG5aSn5a2mIOa5r-W4g-mZoueglOS_ruaJgA!5e0!3m2!1sja!2sjp!4v1754221186860!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+entrance_fee: "一般: 1,000円 / 学生: 無料"
+application_deadline: ""
+manuscript_deadline: ""
+social_gathering_application_deadline: "" 
+application_description: "
+発表及び参加をご希望の方は、上原(uehara [at] kitakyu-u.ac.jp)までメールにてご連絡ください。 
+なお、講演(および参加)希望者多数の場合には、会場の広さなどの関係でお断りせざるを得ない場合があり得ますこと、予めご了承ください。
+講演方法はパワーポイントなどでの、プロジェクタによる発表を想定しています。
+※講演35分＋質疑15分など柔軟にアレンジします。"
+
+program: 
+  - day: "1日目: 2016年09月14日(水)"
+    time_schedule: 
+    - time: "15:00 - 15:10"
+      title: "開会あいさつ"
+      speaker: ""
+      description: ""
+    - time: "15:10 - 16:00"
+      title: "講演1"
+      speaker: "発表者: 野上保之(岡山大学)"
+      description: "同じNTU系列を生成する既約多項式の条件"
+    - time: "16:00 - 16:10"
+      title: "休憩(10分)"
+      speaker: ""
+      description: ""
+    - time: "16:10 - 17:00"
+      title: "講演2"
+      speaker: "発表者: 土屋和由(株式会社光電製作所)"
+      description: "二種類の型のNTU系列に関するインターリーブ系列"
+    - time: "17:00 - 17:50"
+      title: "講演3"
+      speaker: "発表者: 鄭俊如(九州女子大学)"
+      description: "有限体上巡回符号における定義系列に関する性質"
+    - time: "21:00 - "
+      title: "ナイトセッション"
+      speaker: ""
+      description: ""
+
+  - day: "2日目: 2016年09月15日(木)"
+    time_schedule: 
+    - time: "13:20 - 14:10"
+      title: "講演4"
+      speaker: "発表者: 宮崎武(北九州市立大学)"
+      description: "素体上のロジスティック写像との同型関係による素体上の二次写像の分類と生成系列の最長周期"
+    - time: "14:10 - 15:00"
+      title: "講演5"
+      speaker: "発表者: 荒木俊輔(九州工業大学)"
+      description: "擬似乱数生成器における整数上のロジスティック写像のパラメータ更新に関する設計指針"
+    - time: "15:00 - 15:10"
+      title: "休憩(10分)"
+      speaker: ""
+      description: ""
+    - time: "15:10 - 16:00"
+      title: "講演6"
+      speaker: "発表者: 村岡英之(九州工業大学)"
+      description: "整数上のロジスティック写像の振る舞いとコントロールパラメータの関係"
+    - time: "16:00 - 16:50"
+      title: "講演7"
+      speaker: "発表者: 上原聡(北九州市立大学)"
+      description: "トレースによる拡大環上の多値系列への変換について"
+    - time: "21:00 - "
+      title: "ナイトセッション"
+      speaker: ""
+      description: ""
+
+
+  - day: "3日目: 2016年09月16日(金)"
+    time_schedule: 
+    - time: "09:00 - 09:50"
+      title: "講演8"
+      speaker: ""
+      description: ""
+    - time: "10:00 - 10:50"
+      title: "講演9"
+      speaker: ""
+      description: ""
+    - time: "10:50 - "
+      title: "閉会あいさつ"
+      speaker: ""
+      description: ""
+
+proceedings: ""
+
+links: 
+  - title: "情報理論とその応用サブソサイエティ（SITAサブソ）"
+    url: "https://www.ieice.org/ess/sita/index.html"
+  - title: "JR九州 列車時刻・運賃検索"
+    url: "https://www.jrkyushu.co.jp/railway/index.html"
+  - title: "西鉄バス 福岡・福岡空港~湯布院 高速バス"
+    url: "https://www.nishitetsu.jp/bus/highwaybus/rosen/yufuin/"
+  - title: "上原聡"
+    url: "http://www.kitakyu-u.ac.jp/env/subject/d-media/Satoshi_Uehara/"
